@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Survey Page</title>
+    <!-- Latest compiled and minified CSS & JS -->
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.3/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <h3 class="text-center"><i class="fas fa-paw mr-2"></i>Survey Questions:</h3>
+        <hr>
+        <br>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        <form role="form">
+                            <div class="form-group">
+                                <h5>Question 1</h5>
+                                <h6>Do you consider yourself an extrovert?</h6>
+                                <p class="font-italic">
+                                    An extrovert is someone who is outgoing,
+                                    talkative and the "life of the party."
+                                </p>
+                                <select class="selectpicker" title="Choose one of the options"
+                                    data-selected-text-format="count" data-style="btn-info" id="selectExtra">
+                                    <option value="0">Strongly disagree</option>
+                                    <option value="1">To some degree</option>
+                                    <option value="2">Strongly agree</option>
+                                </select>
+                                <hr>
+                            </div>
+                            <div class="form-group">
+                                <h5>Question 2</h5>
+                                <h6>Do you consider yourself an agreeable person?</h6>
+                                <p class="font-italic">
+                                    Agreeableness is a trait that makes people easy to get along with.
+                                    Agreeable people sympathize with others,
+                                    care about their feelings and try to make other people feel at ease.
+                                </p>
+                                <select class="selectpicker show-tick" title="Choose one of the options"
+                                    data-selected-text-format="count" data-style="btn-info" id="selectAgree">
+                                    <option value="0">Strongly disagree</option>
+                                    <option value="1">To some degree</option>
+                                    <option value="2">Strongly agree</option>
+                                </select>
+                                <hr>
+                            </div>
+                            <div class="form-group">
+                                <h5>Question 3</h5>
+                                <h6>Do you consider yourself a person with high conscientiousness?</h6>
+                                <p class="font-italic">
+                                    People who are conscientious are dutiful and self-disciplined.
+                                    They like order and schedules.
+                                </p>
+                                <select class="selectpicker show-tick" title="Choose one of the options"
+                                    data-selected-text-format="count" data-style="btn-info" id="selectConscien">
+                                    <option value="0">Strongly disagree</option>
+                                    <option value="1">To some degree</option>
+                                    <option value="2">Strongly agree</option>
+                                </select>
+                                <hr>
+                            </div>
+                            <div class="form-group">
+                                <h5>Question 4</h5>
+                                <h6>Do you consider yourself a person with high emotional stability level?</h6>
+                                <p class="font-italic">
+                                    It's the opposite of neuroticism, a trait marked by anxiety.
+                                    Irritation and stress.
+                                    People low in neuroticism are calm, cool and collected.
+                                </p>
+                                <select class="selectpicker show-tick" title="Choose one of the options"
+                                    data-selected-text-format="count" data-style="btn-info" id="selectEmot">
+                                    <option value="0">Strongly disagree</option>
+                                    <option value="1">To some degree</option>
+                                    <option value="2">Strongly agree</option>
+                                </select>
+                                <hr>
+                            </div>
+                            <div class="form-group">
+                                <h5>Question 5</h5>
+                                <h6>Do you consider yourself a person with high level of openness?</h6>
+                                <p class="font-italic">
+                                    People with open personalities are intelligent,
+                                    open to new experiences and appreciative of art.
+                                </p>
+                                <select class="selectpicker show-tick" title="Choose one of the options"
+                                    data-selected-text-format="count" data-style="btn-info" id="selectOpen">
+                                    <option value="0">Strongly disagree</option>
+                                    <option value="1">To some degree</option>
+                                    <option value="2">Strongly agree</option>
+                                </select>
+                                <hr>
+                            </div>
+                            <button type="submit" class="btn btn-info submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <footer class="footer">
+            <div class="container" style="color: #5bc0de">
+                <p><a href="/api/tables" class="tealFont">API Small Breeds Link</a> | <a href="/api/tables"
+                        class="tealFont">API Meduim Breeds Link</a> | <a href="/api/tables" class="tealFont">API Large
+                        Breeds Link</a> |<a href="/api/waitlist" class="tealFont"> GitHub Repo</a>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.3/js/bootstrap-select.min.js"></script>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> -->
+</body>
+
+</html>
+
+<!-- BELOW CODE IS CRITICAL. IT HANDLES HOW FORM DATA IS SENT TO OUR SERVER -->
+<script type="text/javascript">
+
+    $(document).ready(function (e) {
+        $('.selectpicker').selectpicker();
+    });
+    // In this code below we create the Front-end JavaScript which "POSTS" our form data to our express server.
+    // In essence, when the user hits submit, jQuery grabs all of the fields then sends a post request to our api
+    // Our api recognizes the route (/api/tables)... and then runs the associated code (found in api-routes.js).
+    // In this case the associated code "saves" the data to the table-data.js file or waitinglist-data.js file
+
+    $(".submit").on("click", function (event) {
+        event.preventDefault();
+
+        var select1 = $("#selectExtra").val();
+        console.log("select1: " + select1);
+
+        var select2 = $("#selectAgree").val();
+        console.log("select2: " + select2);
+
+        var select3 = $("#selectConscien").val();
+        console.log("select3: " + select3);
+
+        var select4 = $("#selectEmot").val();
+        console.log("select4: " + select4);
+
+        var select5 = $("#selectOpen").val();
+        console.log("select5: " + select5);
+
+        // Here we grab the form elements
+        var user = {
+            "scores": []
+        };
+
+
+        var userScores = [];
+        userScores.push(select1);
+        userScores.push(select2);
+        userScores.push(select3);
+        userScores.push(select4);
+        userScores.push(select5);
+        console.log(userScores);
+
+        user.scores = userScores;
+
+    
+        // This line is the magic. It"s very similar to the standard ajax function we used.
+        // Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
+        // The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
+        // depending on if a tables is available or not.
+
+              $.post("/api/furryfriends", user)
+              console.log("trying to post data...");
+               /*  .then(function (data) {
+                    console.log("inside survey html")
+                    /* if(data) {
+                        console.log(" Data ", data);
+                    }
+                    else {
+                        alert("Something went wrong...");
+                    } 
+                    
+                }); */
+    
+
+    });
+
+</script>

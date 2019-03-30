@@ -1,0 +1,104 @@
+var smallDogs = [
+    {
+        "breed":"Miniature Schnauzer",
+        "photo":"../images/schnauzer.jpeg",
+        "scores":[
+            2,
+            0,
+            2,
+            0,
+            0
+          ]
+      },
+      {
+        "breed":"Miniature Poodle",
+        "photo":"../images/poodle.jpeg",
+        "scores":[
+            2,
+            0,
+            0,
+            0,
+            0
+          ]
+      },
+      {
+        "breed":"Yorkshire Terrier",
+        "photo":"../images/yorkie.jpeg",
+        "scores":[
+            0,
+            2,
+            0,
+            0,
+            0
+          ]
+      },
+      {
+        "breed":"Chihuahua",
+        "photo":"../images/chihuahua.jpeg",
+        "scores":[
+            0,
+            2,
+            0,
+            0,
+            0
+          ]
+      },
+      {
+        "breed":"Pomeranian",
+        "photo":"../images/pomernian.jpeg",
+        "scores":[
+            0,
+            2,
+            0,
+            0,
+            2
+          ]
+      },
+      {
+        "breed":"Boston Terrier",
+        "photo":"../images/boston.jpeg",
+        "scores":[
+            0,
+            0,
+            2,
+            0,
+            0
+          ]
+      },
+      {
+        "breed":"Dachshund",
+        "photo":"../images/dachshund.jpg",
+        "scores":[
+            0,
+            0,
+            0,
+            2,
+            0
+          ]
+      },
+      {
+        "breed":"Pug",
+        "photo":"../images/pug.jpg",
+        "scores":[
+            0,
+            0,
+            0,
+            0,
+            2
+          ]
+      },
+      {
+        "breed":"Border Terrier",
+        "photo":"../images/border.jpg",
+        "scores":[
+            0,
+            0,
+            0,
+            0,
+            2
+          ]
+      }      
+
+];
+
+module.exports = smallDogs;

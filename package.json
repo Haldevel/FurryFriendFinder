@@ -1,0 +1,24 @@
+{
+  "name": "FurryFriendFinder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Haldevel/FurryFriendFinder.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Haldevel/FurryFriendFinder/issues"
+  },
+  "homepage": "https://github.com/Haldevel/FurryFriendFinder#readme",
+  "dependencies": {
+    "bootstrap-select": "^1.13.9",
+    "express": "^4.16.4"
+  }
+}
