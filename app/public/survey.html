@@ -14,6 +14,11 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.3/css/bootstrap-select.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style>
+        .tealFont {
+            color: #5bc0de;
+        }
+    </style>
 </head>
 
 <body>
@@ -177,25 +182,25 @@
 
         user.scores = userScores;
 
-    
+
         // This line is the magic. It"s very similar to the standard ajax function we used.
         // Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
         // The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
         // depending on if a tables is available or not.
 
-              $.post("/api/furryfriends", user)
-              console.log("trying to post data...");
-               /*  .then(function (data) {
-                    console.log("inside survey html")
-                    /* if(data) {
-                        console.log(" Data ", data);
-                    }
-                    else {
-                        alert("Something went wrong...");
-                    } 
-                    
-                }); */
-    
+        $.post("/api/furryfriends", user)
+        console.log("trying to post data...");
+        /*  .then(function (data) {
+             console.log("inside survey html")
+             /* if(data) {
+                 console.log(" Data ", data);
+             }
+             else {
+                 alert("Something went wrong...");
+             } 
+             
+         }); */
+
 
     });
 

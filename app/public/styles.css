@@ -1,0 +1,15 @@
+.tealFont {
+    color: #5bc0de;
+}
+
+/* #header .bottom-header {
+    padding-top: 180px;
+    padding-bottom: 200px;
+}
+ */
+@media (min-width: 576px) {
+    .jumbotron {
+      padding-bottom: 1.2rem; 
+      padding-top: 1rem;
+  }
+  } 
