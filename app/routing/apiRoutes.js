@@ -19,10 +19,11 @@ module.exports = function (app) {
     // (ex: localhost:PORT/api/admin... they are shown a JSON of the data in the table)
     // ---------------------------------------------------------------------------
 
-    /* app.get("/api/tables", function(req, res) {
-      res.json(tableData);
+     app.get("/api/furryfriends", function(req, res) {
+      res.json(smallDogs);
     });
   
+    /*
     app.get("/api/waitlist", function(req, res) {
       res.json(waitListData);
     }); */
@@ -95,22 +96,8 @@ module.exports = function (app) {
             threeMatches.push({"breed": smallDogs[finalThreeArray[i]].breed, "image": smallDogs[finalThreeArray[i]].photo});
         }
 
-       
-        //res.body = threeMatches;
-
-
-
         res.json(threeMatches);
-
-
-        /* if (tableData.length < 5) {
-          tableData.push(req.body);
-          res.json(true);
-        }
-        else {
-          waitListData.push(req.body);
-          res.json(false);
-        } */
+        
     });
 
     // ---------------------------------------------------------------------------
