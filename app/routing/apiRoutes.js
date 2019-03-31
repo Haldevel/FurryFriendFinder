@@ -44,7 +44,7 @@ module.exports = function (app) {
         var userObject = req.body;
         var userScores = userObject.scores;
 
-        var differArr = [];
+        var finalThreeArray = [];
 
         var myMap = new Map();
 
@@ -59,12 +59,12 @@ module.exports = function (app) {
             var dogDiff = 0;
             for (var i = 0; i < userScores.length; i++) {
 
-                dogDiff =  dogDiff  + Math.abs(userScores[i] - smallDogs[j].scores[i]);
+                dogDiff = dogDiff + Math.abs(userScores[i] - smallDogs[j].scores[i]);
 
 
             }
-           // differArr.push({[j]: dogDiff });
-           myMap.set(j, dogDiff);
+            // differArr.push({[j]: dogDiff });
+            myMap.set(j, dogDiff);
 
         }
 
@@ -72,23 +72,35 @@ module.exports = function (app) {
 
         for (var [key, value] of myMap) {
             console.log(key + ' = ' + value);
-          }
+        }
 
-          
+        const mapSort1 = new Map([...myMap.entries()].sort((a, b) => a[1] - b[1]));
+        console.log(mapSort1);
 
-        /* for (var key of myMap.keys()) {
-            console.log(key, myMap.value);
-          } */
-     
-          
-         /*  for (var value of myMap.values()) {
-            console.log(value);
-          }
-    */
+        var count = 0;
+        for (var [key, value] of mapSort1) {
+            console.log(key + ' = ' + value);
+            if (count < 3) {
+                finalThreeArray.push(key);
+                count++;
+            }
+            else break;
+        }
+
+        console.log(finalThreeArray);
+        var threeMatches = [];
+
+        for(var i = 0; i < finalThreeArray.length; i++) {
+            console.log(smallDogs[finalThreeArray[i]].breed);
+            threeMatches.push({"breed": smallDogs[finalThreeArray[i]].breed, "image": smallDogs[finalThreeArray[i]].photo});
+        }
+
+       
+        //res.body = threeMatches;
 
 
 
-        res.json(true);
+        res.json(threeMatches);
 
 
         /* if (tableData.length < 5) {

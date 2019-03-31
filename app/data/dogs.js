@@ -1,7 +1,7 @@
 var smallDogs = [
     {
         "breed":"Miniature Schnauzer",
-        "photo":"../images/schnauzer.jpeg",
+        "photo":"../images/schnauzer.jpg",
         "scores":[
             2,
             0,
@@ -12,7 +12,7 @@ var smallDogs = [
       },
       {
         "breed":"Miniature Poodle",
-        "photo":"../images/poodle.jpeg",
+        "photo":"../images/poodle.jpg",
         "scores":[
             2,
             0,
@@ -23,7 +23,7 @@ var smallDogs = [
       },
       {
         "breed":"Yorkshire Terrier",
-        "photo":"../images/yorkie.jpeg",
+        "photo":"../images/yorkie.jpg",
         "scores":[
             0,
             2,
@@ -34,7 +34,7 @@ var smallDogs = [
       },
       {
         "breed":"Chihuahua",
-        "photo":"../images/chihuahua.jpeg",
+        "photo":"../images/chihuahua.jpg",
         "scores":[
             0,
             2,
@@ -45,7 +45,7 @@ var smallDogs = [
       },
       {
         "breed":"Pomeranian",
-        "photo":"../images/pomernian.jpeg",
+        "photo":"../images/pomernian.jpg",
         "scores":[
             0,
             2,
@@ -56,7 +56,7 @@ var smallDogs = [
       },
       {
         "breed":"Boston Terrier",
-        "photo":"../images/boston.jpeg",
+        "photo":"../images/boston.jpg",
         "scores":[
             0,
             0,
