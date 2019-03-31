@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Survey Page</title>
-    <!-- Latest compiled and minified CSS & JS -->
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -19,10 +18,10 @@
             color: #5bc0de;
         }
 
-       .modal {
+        .modal {
             margin: 0 auto;
             background-color: #5bc0de;
-            height: 700px; 
+            height: 700px;
         }
 
         /*
@@ -33,7 +32,6 @@
 
         .modal-dialog,
         .modal-content {
-            /* 90% of window height */
             height: 90%;
         }
 
@@ -41,8 +39,7 @@
             /* 100% = dialog height, 60px = header + footer */
             max-height: calc(100% - 60px);
             overflow-y: scroll;
-        }          
-
+        }
     </style>
 </head>
 
@@ -165,7 +162,8 @@
 
     <footer class="footer">
         <div class="container" style="color: #5bc0de">
-            <p><a href="/api/tables" class="tealFont">API Small Breeds Link</a> | <a href="/api/waitlist" class="tealFont"> GitHub Repo</a>
+            <p><a href="/api/tables" class="tealFont">API Small Breeds Link</a> | <a href="/api/waitlist"
+                    class="tealFont"> GitHub Repo</a>
         </div>
     </footer>
 
@@ -182,17 +180,12 @@
 
 </html>
 
-<!-- BELOW CODE IS CRITICAL. IT HANDLES HOW FORM DATA IS SENT TO OUR SERVER -->
 <script type="text/javascript">
-
+    //add javascript for selectpicker functioning
     $(document).ready(function (e) {
         $('.selectpicker').selectpicker();
     });
-    // In this code below we create the Front-end JavaScript which "POSTS" our form data to our express server.
-    // In essence, when the user hits submit, jQuery grabs all of the fields then sends a post request to our api
-    // Our api recognizes the route (/api/tables)... and then runs the associated code (found in api-routes.js).
-    // In this case the associated code "saves" the data to the table-data.js file or waitinglist-data.js file
-
+    // On submit we grab selected answers from the corresponding select fields
     $(".submit").on("click", function (event) {
         event.preventDefault();
 
@@ -211,12 +204,12 @@
         var select5 = $("#selectOpen").val();
         console.log("select5: " + select5);
 
-        // Here we grab the form elements
+        // declare the object to hold a user's choices
         var user = {
             "scores": []
         };
 
-
+        //push the scores /user selections to the array
         var userScores = [];
         userScores.push(select1);
         userScores.push(select2);
@@ -225,43 +218,32 @@
         userScores.push(select5);
         console.log(userScores);
 
+        //set the 'scores' property of the object to the array with the user's selections
         user.scores = userScores;
 
-
-        // This line is the magic. It"s very similar to the standard ajax function we used.
-        // Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
-        // The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
-        // depending on if a tables is available or not.
+        //The code below posts the user object to the specified route, and in the callback we receive the server
+        //response with the array of three objects containg the data about three top matching breeds. 
 
         $.post("/api/furryfriends", user)
 
             .then(function (data) {
-                console.log("inside survey html")
                 if (data) {
-                    console.log(" Data ", data);
-                    console.log("length: " + data.length);
-                    /* $(".modal-title").text(data[0].breed);
-                    $(".modal-body").text(data[0].image); */
 
-                    //console.log(data[0].photo);
                     var stringModal = "";
                     for (var i = 0; i < data.length; i++) {
-                        //$(".modal-body").append("<h3>"+data[i]+"</h3><br>");
                         stringModal += "<h6>" + data[i].breed + "</h6>";
                         stringModal += "<img src='" + data[i].image + "'><hr>";
 
                     }
+                    //set a modal body to contain the html code with the values of top mathing breeds data
                     $(".modal-body").html(stringModal);
-                    //$('#myModal').modal('handleUpdate');
+                    //show the modal
                     $("#exampleModalLong").modal('show');
-                    //$('#myModal').modal('handleUpdate');
                 }
                 else {
                     alert("Something went wrong...");
                 }
-
             });
-
     });
 
 </script>
