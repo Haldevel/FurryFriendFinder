@@ -19,16 +19,29 @@
             color: #5bc0de;
         }
 
-        .modal {
+       .modal {
 
 
             margin: 0 auto;
-            height: 600px;
+          /*   height: 600px; */
+        }
+
+        /*
+        .modal-body {
+            overflow-y: auto;
+            height: 650px;
+        } */
+
+        .modal-dialog,
+        .modal-content {
+            /* 80% of window height */
+            height: 90%;
         }
 
         .modal-body {
-            overflow-y: auto;
-            height: 550px;
+            /* 100% = dialog height, 120px = header + footer */
+            max-height: calc(100% - 60px);
+            overflow-y: scroll;
         }
 
         /*
@@ -78,7 +91,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
