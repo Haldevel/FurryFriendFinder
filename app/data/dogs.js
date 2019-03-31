@@ -1,7 +1,7 @@
 var smallDogs = [
     {
         "breed":"Miniature Schnauzer",
-        "photo":"../images/schnauzer.jpg",
+        "photo":"../images/schnauzer_s.jpg",
         "scores":[
             2,
             0,
@@ -12,7 +12,7 @@ var smallDogs = [
       },
       {
         "breed":"Miniature Poodle",
-        "photo":"../images/poodle.jpg",
+        "photo":"../images/poodle_s.jpg",
         "scores":[
             2,
             0,
@@ -23,7 +23,7 @@ var smallDogs = [
       },
       {
         "breed":"Yorkshire Terrier",
-        "photo":"../images/yorkie.jpg",
+        "photo":"../images/yorkie_s.jpg",
         "scores":[
             0,
             2,
@@ -34,7 +34,7 @@ var smallDogs = [
       },
       {
         "breed":"Chihuahua",
-        "photo":"../images/chihuahua.jpg",
+        "photo":"../images/chihuahua_s.jpg",
         "scores":[
             0,
             2,
@@ -45,7 +45,7 @@ var smallDogs = [
       },
       {
         "breed":"Pomeranian",
-        "photo":"../images/pomernian.jpg",
+        "photo":"../images/pomernian_s.jpg",
         "scores":[
             0,
             2,
@@ -56,7 +56,7 @@ var smallDogs = [
       },
       {
         "breed":"Boston Terrier",
-        "photo":"../images/boston.jpg",
+        "photo":"../images/boston_s.jpg",
         "scores":[
             0,
             0,
@@ -67,7 +67,7 @@ var smallDogs = [
       },
       {
         "breed":"Dachshund",
-        "photo":"../images/dachshund.jpg",
+        "photo":"../images/dachshund_s.jpg",
         "scores":[
             0,
             0,
@@ -78,7 +78,7 @@ var smallDogs = [
       },
       {
         "breed":"Pug",
-        "photo":"../images/pug.jpg",
+        "photo":"../images/pug_s.jpg",
         "scores":[
             0,
             0,
@@ -89,7 +89,7 @@ var smallDogs = [
       },
       {
         "breed":"Border Terrier",
-        "photo":"../images/border.jpg",
+        "photo":"../images/border_s.jpg",
         "scores":[
             0,
             0,
