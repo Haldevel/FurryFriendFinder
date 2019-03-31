@@ -24,3 +24,22 @@ The survey page contains a form with five basic questions about a user personali
 
 ![Survey Page](./images/survey_page.jpg)
 
+_________________________________________________________________
+
+#### Results: 
+
+The top three matches of small breeds are displayed in the modal:
+
+![Results](./images/results.png)
+
+_________________________________________________________________
+
+Technologies used: 
+  * node.js
+  * express
+  * html
+  * css
+  * jQuery
+  * Bootstrap
+_________________________________________________________________
+
